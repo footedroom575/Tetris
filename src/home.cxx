@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/GLAD/glad.h"
+#include "../lib/GLAD/glad.h"
 #include <GLFW/glfw3.h>
 using namespace std; 
 
