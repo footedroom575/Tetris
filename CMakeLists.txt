@@ -4,18 +4,15 @@ cmake_minimum_required(VERSION 3.22)
 project(Tetris)
 
 find_package(OpenGL REQUIRED)
-find_package (glfw3 REQUIRED)
-
-
+find_package(glfw3 REQUIRED)
+add_library(GLAD "src/glad.c")
 
 #Bring the headers, such as Student.h into the project
 set(MY_HEADER_FILES
-    include/GLAD/glad.h
     include/home.hxx
 )
 
 set(MY_SOURCE_FILES
-    src/glad.c
     src/main.cxx 
     src/home.cxx
 )
@@ -30,5 +27,6 @@ add_executable(tetris
 target_link_libraries(tetris
     ${OPENGL_LIBRARY} # filled by "find_package(OpenGL REQUIRED)"
     glfw
+    GLAD
 )
 
