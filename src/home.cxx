@@ -1,7 +1,9 @@
-#include <iostream>
 #include "../lib/GLAD/glad.h"
-#include <GLFW/glfw3.h>
-using namespace std; 
+// if you want to use native glfw3
+//#include <GLFW/glfw3.h>
+#include "../lib/GLFW/include/GLFW/glfw3.h"
+#include <iostream>
+using namespace std;
 
 // Function prototypes
 void key_callback(GLFWwindow* window,
