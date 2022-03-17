@@ -1,1 +1,1 @@
-void home ();
+void home();

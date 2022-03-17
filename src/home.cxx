@@ -1,10 +1,21 @@
+#include <SFML/Graphics.hpp>
+#include <SFML/Window/Keyboard.hpp>
 #include <iostream>
-using namespace std;
 
+void home() {
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
 
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
 
-// The MAIN function, from here we start the application and run the game loop
-int home() {
-    cout << "Welcome to Tetris !" << endl;
-    return 0;
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
 }
