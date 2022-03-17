@@ -39,6 +39,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
+    - name: install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libsfml-dev
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
